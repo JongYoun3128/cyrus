@@ -88,6 +88,7 @@ body {
 }
 .content-box {
     display: flex;
+    gap: 100px;
 }
 .box-list li {
     display: flex;
@@ -108,5 +109,161 @@ body {
     width: 50px;
     height: 50px;
 }
-@media (max-width: 600px) {
+
+/* Detail Image Swiper Styles */
+.detail-img {
+    width: 100%;
+    height: auto;
+}
+
+.detail-img .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-img .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Swiper 버튼 커스터마이징 */
+.detail-img .swiper-button-next,
+.detail-img .swiper-button-prev {
+    color: #3ea480;
+}
+
+.detail-img .swiper-button-next:after,
+.detail-img .swiper-button-prev:after {
+    font-size: 30px;
+}
+
+/* Swiper 페이지네이션 커스터마이징 */
+.detail-img .swiper-pagination-bullet {
+    background: #3ea480;
+}
+
+.detail-img .swiper-pagination-bullet-active {
+    background: #3ea480;
+    opacity: 1;
+}
+
+/* Point Section Styles */
+.point {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.point h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #171b39;
+}
+
+/* Point List Swiper Styles */
+.point-list {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.point-list .swiper-wrapper {
+    align-items: center;
+}
+
+.point-list .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.point-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.point-item:hover {
+    transform: translateY(-10px);
+}
+
+.point-item h3 {
+    font-size: 2.5rem;
+    color: #3ea480;
+    margin-bottom: 25px;
+}
+
+.point-item p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.point-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Point List Swiper 버튼 커스터마이징 */
+.point-list .swiper-button-next,
+.point-list .swiper-button-prev {
+    color: #3ea480;
+}
+
+.point-list .swiper-button-next:after,
+.point-list .swiper-button-prev:after {
+    font-size: 30px;
+}
+
+/* Point List Swiper 페이지네이션 커스터마이징 */
+.point-list .swiper-pagination-bullet {
+    background: #3ea480;
+    width: 12px;
+    height: 12px;
+}
+
+.point-list .swiper-pagination-bullet-active {
+    background: #3ea480;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .point h1 {
+        font-size: 2rem;
+    }
+
+    .point-item {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .point-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .point-item p {
+        font-size: 1rem;
+    }
+
+    .point-item img {
+        max-width: 100%;
+    }
 }
