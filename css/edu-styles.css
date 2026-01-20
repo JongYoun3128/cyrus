@@ -1055,14 +1055,8 @@ body {
 
     .arrow-right {
         transform: rotate(90deg);
-        width: 4px;
-        height: 20px;
-    }
-
-    .arrow-right::after {
-        top: 50%;
-        left: -6px;
-        transform: translateY(-50%) rotate(90deg);
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .closing-message {
@@ -1079,9 +1073,8 @@ body {
 /* 작은 모바일 - 480px 이하 */
 @media (max-width: 480px) {
     .header-logo img {
-        width: 100px;
+        width: 200px;
     }
-
     .header-menu {
         width: 220px;
     }

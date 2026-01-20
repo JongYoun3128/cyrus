@@ -1004,7 +1004,7 @@ body {
 /* 작은 모바일 (320px ~ 480px) */
 @media (max-width: 480px) {
     .header-logo img {
-        width: 100px;
+        width: 200px;
     }
 
     .header-menu {

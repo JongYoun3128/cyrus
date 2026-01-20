@@ -531,7 +531,8 @@
 
                     <div class="closing-message">
                         <span class="quote">"</span>
-                        친환경 실천의 습관화로 ESG 교육의 실효성을 높입니다
+                        친환경 실천의 습관화로<br />
+                        ESG 교육의 실효성을 높입니다
                         <span class="quote">"</span>
                     </div>
                 </div>
@@ -539,28 +540,31 @@
         </div>
         <script>
             // 햄버거 메뉴 토글
-            const hamburgerBtn = document.getElementById('hamburgerBtn');
-            const headerMenu = document.getElementById('headerMenu');
+            const hamburgerBtn = document.getElementById("hamburgerBtn");
+            const headerMenu = document.getElementById("headerMenu");
 
-            hamburgerBtn.addEventListener('click', () => {
-                hamburgerBtn.classList.toggle('active');
-                headerMenu.classList.toggle('active');
+            hamburgerBtn.addEventListener("click", () => {
+                hamburgerBtn.classList.toggle("active");
+                headerMenu.classList.toggle("active");
             });
 
             // 메뉴 링크 클릭시 메뉴 닫기
-            const menuLinks = headerMenu.querySelectorAll('a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburgerBtn.classList.remove('active');
-                    headerMenu.classList.remove('active');
+            const menuLinks = headerMenu.querySelectorAll("a");
+            menuLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    hamburgerBtn.classList.remove("active");
+                    headerMenu.classList.remove("active");
                 });
             });
 
             // 메뉴 외부 클릭시 닫기
-            document.addEventListener('click', (e) => {
-                if (!hamburgerBtn.contains(e.target) && !headerMenu.contains(e.target)) {
-                    hamburgerBtn.classList.remove('active');
-                    headerMenu.classList.remove('active');
+            document.addEventListener("click", (e) => {
+                if (
+                    !hamburgerBtn.contains(e.target) &&
+                    !headerMenu.contains(e.target)
+                ) {
+                    hamburgerBtn.classList.remove("active");
+                    headerMenu.classList.remove("active");
                 }
             });
         </script>
