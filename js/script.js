@@ -1,3 +1,31 @@
+// 햄버거 메뉴 토글
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const headerMenu = document.getElementById('headerMenu');
+
+if (hamburgerBtn && headerMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        headerMenu.classList.toggle('active');
+    });
+
+    // 메뉴 링크 클릭시 메뉴 닫기
+    const menuLinks = headerMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            headerMenu.classList.remove('active');
+        });
+    });
+
+    // 메뉴 외부 클릭시 닫기
+    document.addEventListener('click', (e) => {
+        if (!hamburgerBtn.contains(e.target) && !headerMenu.contains(e.target)) {
+            hamburgerBtn.classList.remove('active');
+            headerMenu.classList.remove('active');
+        }
+    });
+}
+
 // Detail Image Swiper 초기화
 const detailSwiper = new Swiper(".detail-img", {
     // 슬라이드 간격

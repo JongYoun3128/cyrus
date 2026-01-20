@@ -3,7 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>교육 프레젠테이션</title>
+        <meta property="og:title" content="Cyrus 대리점" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://jongyoun3128.github.io/cyrus/images/url.png"
+        />
+        <meta property="og:description" content="Cyrus Bike 공식파트너 " />
+        <title>EDUCATION</title>
         <link rel="stylesheet" href="./css/edu-styles.css" />
     </head>
     <body>
@@ -11,18 +18,22 @@
             <div class="header-logo">
                 <a href="index.html"><img src="images/logo.png" alt="" /></a>
             </div>
-            <ul class="header-menu">
-                <li><a href="education.html">교육</a></li>
-                <li><a href="#">메뉴</a></li>
-                <li><a href="#">후기</a></li>
-                <li><a href="#">문의</a></li>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="메뉴">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="header-menu" id="headerMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="#">Contect</a></li>
             </ul>
         </div>
         <div class="presentation">
             <!-- 슬라이드 2: 핵심 가치 -->
             <div class="slide" id="slide2">
                 <div class="slide-header">
-                    <h3 class="subtitle">Core Value</h3>
                     <h1 class="title">핵심 가치</h1>
                 </div>
                 <div class="cards-container">
@@ -164,46 +175,12 @@
             <!-- 슬라이드 3: 교육적 활용 방안 -->
             <div class="slide" id="slide3">
                 <div class="slide-header">
-                    <h3 class="subtitle">Educational Application Strategies</h3>
                     <h1 class="title">교육적 활용 방안</h1>
                 </div>
                 <div class="strategy-grid">
                     <div class="strategy-card">
                         <div class="strategy-icon-box">
-                            <svg
-                                class="strategy-icon"
-                                viewBox="0 0 120 100"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M60 20 L50 30 L40 30 L30 40 L30 70 L50 70 L60 60 L70 60 L90 70 L90 40 L80 30 L70 30 Z"
-                                    stroke="#2D7A5F"
-                                    stroke-width="3"
-                                    fill="none"
-                                />
-                                <circle
-                                    cx="45"
-                                    cy="45"
-                                    r="8"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <circle
-                                    cx="75"
-                                    cy="45"
-                                    r="8"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <path
-                                    d="M60 35 L60 20 L65 15 L70 20 L70 30"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                />
-                            </svg>
+                            <img src="images/icon6.png" alt="" />
                         </div>
                         <h2 class="strategy-title">
                             친환경<br />동아리 프로그램
@@ -216,52 +193,7 @@
 
                     <div class="strategy-card">
                         <div class="strategy-icon-box">
-                            <svg
-                                class="strategy-icon"
-                                viewBox="0 0 120 100"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M60 25 Q50 35 50 50 Q50 60 55 65"
-                                    stroke="#2D7A5F"
-                                    stroke-width="3"
-                                    fill="none"
-                                />
-                                <circle cx="60" cy="40" r="6" fill="#2D7A5F" />
-                                <rect
-                                    x="35"
-                                    y="55"
-                                    width="10"
-                                    height="20"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <rect
-                                    x="55"
-                                    y="45"
-                                    width="10"
-                                    height="30"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <rect
-                                    x="75"
-                                    y="50"
-                                    width="10"
-                                    height="25"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <path
-                                    d="M30 75 L90 75"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                />
-                            </svg>
+                            <img src="images/icon7.png" alt="" />
                         </div>
                         <h2 class="strategy-title">
                             건강 증진 &<br />체육 수업 연계
@@ -277,47 +209,7 @@
 
                     <div class="strategy-card">
                         <div class="strategy-icon-box">
-                            <svg
-                                class="strategy-icon"
-                                viewBox="0 0 120 100"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <circle
-                                    cx="40"
-                                    cy="35"
-                                    r="8"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <rect
-                                    x="25"
-                                    y="45"
-                                    width="30"
-                                    height="25"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <rect
-                                    x="60"
-                                    y="30"
-                                    width="35"
-                                    height="25"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <path
-                                    d="M65 35 L90 35 M65 40 L90 40 M65 45 L90 45 M65 50 L90 50"
-                                    stroke="#2D7A5F"
-                                    stroke-width="1.5"
-                                />
-                                <circle cx="75" cy="35" r="3" fill="#2D7A5F" />
-                                <circle cx="85" cy="35" r="3" fill="#2D7A5F" />
-                                <circle cx="75" cy="45" r="3" fill="#2D7A5F" />
-                            </svg>
+                            <img src="images/icon8.png" alt="" />
                         </div>
                         <h2 class="strategy-title">
                             융합형 창의 교육<br />(진로탐색)
@@ -336,47 +228,7 @@
 
                     <div class="strategy-card">
                         <div class="strategy-icon-box">
-                            <svg
-                                class="strategy-icon"
-                                viewBox="0 0 120 100"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <circle cx="60" cy="30" r="8" fill="#2D7A5F" />
-                                <path
-                                    d="M50 35 L50 50 M70 35 L70 50"
-                                    stroke="#2D7A5F"
-                                    stroke-width="3"
-                                />
-                                <path
-                                    d="M50 50 L45 60 M50 50 L55 60"
-                                    stroke="#2D7A5F"
-                                    stroke-width="3"
-                                />
-                                <path
-                                    d="M70 50 L65 60 M70 50 L75 60"
-                                    stroke="#2D7A5F"
-                                    stroke-width="3"
-                                />
-                                <circle
-                                    cx="35"
-                                    cy="55"
-                                    r="6"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <circle
-                                    cx="85"
-                                    cy="55"
-                                    r="6"
-                                    stroke="#2D7A5F"
-                                    stroke-width="2"
-                                    fill="none"
-                                />
-                                <circle cx="25" cy="70" r="5" fill="#2D7A5F" />
-                                <circle cx="95" cy="70" r="5" fill="#2D7A5F" />
-                            </svg>
+                            <img src="images/icon9.png" alt="" />
                         </div>
                         <h2 class="strategy-title">
                             학생 참여형<br />프로그램
@@ -395,8 +247,7 @@
             <!-- 슬라이드 4: 도입 및 운영 시례 (1) -->
             <div class="slide" id="slide4">
                 <div class="slide-header">
-                    <h3 class="subtitle">Reference Sites in Operation</h3>
-                    <h1 class="title">도입 및 운영 시례</h1>
+                    <h1 class="title">도입 및 운영 사례</h1>
                 </div>
                 <div class="reference-container">
                     <div class="reference-column">
@@ -457,8 +308,7 @@
             <!-- 슬라이드 5: 도입 및 운영 시례 (2) -->
             <div class="slide" id="slide5">
                 <div class="slide-header">
-                    <h3 class="subtitle">Reference Sites in Operation</h3>
-                    <h1 class="title">도입 및 운영 시례</h1>
+                    <h1 class="title">도입 및 운영 사례</h1>
                 </div>
                 <div class="reference-container-2">
                     <div class="b2c-section">
@@ -505,7 +355,6 @@
             <!-- 슬라이드 6: 대외 활동 및 성과 -->
             <div class="slide" id="slide6">
                 <div class="slide-header">
-                    <h3 class="subtitle">Activities & Achievements</h3>
                     <h1 class="title">대외 활동 및 성과</h1>
                 </div>
                 <div class="achievement-grid">
@@ -558,7 +407,6 @@
             <!-- 슬라이드 7: 학교 리워드 재원 활용 구조 -->
             <div class="slide" id="slide7">
                 <div class="slide-header">
-                    <h3 class="subtitle">School Reward Funding Structure</h3>
                     <h1 class="title">학교 리워드 재원 활용 구조</h1>
                 </div>
                 <div class="table-container">
@@ -640,7 +488,6 @@
             <!-- 슬라이드 8: 도입효과 및 기대 성과 -->
             <div class="slide" id="slide8">
                 <div class="slide-header">
-                    <h3 class="subtitle">SEOHAN INNOTEK</h3>
                     <h1 class="title">도입효과 및 기대 성과</h1>
                 </div>
                 <div class="effect-section">
@@ -689,17 +536,33 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 네비게이션 -->
-            <div class="navigation">
-                <button class="nav-btn" id="prevBtn">◀ 이전</button>
-                <span class="page-indicator"
-                    ><span id="currentSlide">1</span> / 7</span
-                >
-                <button class="nav-btn" id="nextBtn">다음 ▶</button>
-            </div>
         </div>
+        <script>
+            // 햄버거 메뉴 토글
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const headerMenu = document.getElementById('headerMenu');
 
-        <script src="./js/edu-script.js"></script>
+            hamburgerBtn.addEventListener('click', () => {
+                hamburgerBtn.classList.toggle('active');
+                headerMenu.classList.toggle('active');
+            });
+
+            // 메뉴 링크 클릭시 메뉴 닫기
+            const menuLinks = headerMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburgerBtn.classList.remove('active');
+                    headerMenu.classList.remove('active');
+                });
+            });
+
+            // 메뉴 외부 클릭시 닫기
+            document.addEventListener('click', (e) => {
+                if (!hamburgerBtn.contains(e.target) && !headerMenu.contains(e.target)) {
+                    hamburgerBtn.classList.remove('active');
+                    headerMenu.classList.remove('active');
+                }
+            });
+        </script>
     </body>
 </html>

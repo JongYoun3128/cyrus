@@ -16,18 +16,23 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
-        <title>Document</title>
+        <title>HOME</title>
     </head>
     <body>
         <div class="header">
             <div class="header-logo">
                 <a href="index.html"><img src="images/logo.png" alt="" /></a>
             </div>
-            <ul class="header-menu">
-                <li><a href="education.html">교육</a></li>
-                <li><a href="#">메뉴</a></li>
-                <li><a href="#">후기</a></li>
-                <li><a href="#">문의</a></li>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="메뉴">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="header-menu" id="headerMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="#">Contect</a></li>
             </ul>
         </div>
         <div class="main">
@@ -151,6 +156,63 @@
                         <div class="swiper-button-prev"></div>
                         <!-- 페이지네이션 -->
                         <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="use">
+                    <h1>사용방법</h1>
+                    <div class="use-box">
+                        <ul class="box-img">
+                            <li>
+                                <div class="box-text">
+                                    <h2>step 1</h2>
+                                    <p>
+                                        사이러스 어플을 설치하고
+                                        <br />회원가입을 해주세요.
+                                    </p>
+                                </div>
+                                <img src="images/use1.png" alt="" />
+                            </li>
+                            <li>
+                                <div class="box-text">
+                                    <h2>step 2</h2>
+                                    <p>
+                                        사이러스 어플의
+                                        <br />장비연결을 클릭해주세요.
+                                    </p>
+                                </div>
+                                <img src="images/use2.png" alt="" />
+                            </li>
+                            <li>
+                                <div class="box-text">
+                                    <h2>step 3</h2>
+                                    <p>
+                                        사이러스 바이크에 부착돤
+                                        <br />QR코드를 인식해주세요.
+                                    </p>
+                                </div>
+                                <img src="images/use3.png" alt="" />
+                            </li>
+                            <li>
+                                <div class="box-text">
+                                    <h2>step 4</h2>
+                                    <p>
+                                        블루투스 연결이 완료되면
+                                        <br />안내에 따라 바이크 안정화 시작
+                                    </p>
+                                </div>
+                                <img src="images/use4.png" alt="" />
+                            </li>
+                            <li>
+                                <div class="box-text">
+                                    <h2>step 5</h2>
+                                    <p>
+                                        바이크 안정화가 끝나면
+                                        <br />자유롭게 운동해주세요.
+                                    </p>
+                                </div>
+                                <img src="images/use5.png" alt="" />
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

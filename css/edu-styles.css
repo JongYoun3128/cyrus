@@ -23,7 +23,7 @@ body {
     font-family: "Noto Sans", sans-serif;
     width: 100%;
     background: #f5f5f5;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .header {
@@ -35,7 +35,7 @@ body {
     padding: 20px 0;
     top: 0;
     z-index: 99;
-    background-color: rgba(255, 255, 255, 0.575);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 .header-menu {
     display: flex;
@@ -46,25 +46,64 @@ body {
     display: block;
     font-size: 1rem;
 }
-.presentation {
-    padding-top: 70px;
-    width: 80%;
-    height: 100vh;
+
+/* 햄버거 버튼 */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 101;
     position: relative;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hamburger-btn:hover {
+    background: rgba(45, 122, 95, 0.1);
+}
+
+.hamburger-btn span {
+    width: 100%;
+    height: 4px;
+    background-color: #2d7a5f;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+.presentation {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    width: 80%;
     margin: 0 auto;
 }
 
 .slide {
     width: 100%;
-    height: calc(100vh - 60px);
     background: white;
-    display: none;
-    padding: 40px 60px;
-    overflow-y: auto;
-}
-
-.slide.active {
     display: block;
+    padding: 60px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* 슬라이드 헤더 */
@@ -631,17 +670,7 @@ body {
 
 /* 네비게이션 */
 .navigation {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: #2d7a5f;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
 .nav-btn {
@@ -674,6 +703,7 @@ body {
 }
 
 /* 반응형 */
+/* 태블릿 반응형 */
 @media (max-width: 1400px) {
     .flow-diagram {
         grid-template-columns: repeat(3, 1fr);
@@ -688,45 +718,454 @@ body {
     }
 }
 
-@media (max-width: 600px) {
-    .presentation {
-        width: 100%;
+/* 모바일 반응형 - 768px 이하 */
+@media (max-width: 768px) {
+    /* 헤더 */
+
+    .header-logo {
+        z-index: 100;
     }
+
+    .header-logo img {
+        width: 120px;
+    }
+
+    /* 햄버거 버튼 표시 */
+    .hamburger-btn {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* 모바일 메뉴 */
+    .header-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        gap: 0;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 30px 20px;
+        transition: right 0.3s ease;
+        align-items: flex-start;
+    }
+
+    .header-menu.active {
+        top: 5%;
+        right: 0;
+    }
+    .header-menu li {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .header-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .header-menu li a {
+        font-size: 1.1rem;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    .header-menu li a:hover {
+        color: #2d7a5f;
+    }
+
+    /* 프레젠테이션 */
+    .presentation {
+        width: 95%;
+        padding-top: 140px;
+        padding-bottom: 40px;
+    }
+
     .slide {
         padding: 30px 20px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+    }
+
+    /* 슬라이드 헤더 */
+    .slide-header {
+        margin-bottom: 30px;
+    }
+
+    .subtitle {
+        font-size: 14px;
     }
 
     .title {
-        font-size: 36px;
-    }
-    .reference-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .reference-images {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .b2c-images {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .event-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .cards-container,
-    .strategy-grid,
-    .achievement-grid,
-    .effect-boxes {
-        grid-template-columns: 1fr;
+        font-size: 28px;
+        line-height: 1.3;
     }
 
-    .flow-diagram {
+    /* 슬라이드 2: 핵심 가치 카드 */
+    .cards-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .value-card {
+        padding: 30px 20px;
+    }
+
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .card-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .card-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    /* 슬라이드 3: 교육적 활용 방안 */
+    .strategy-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .strategy-card {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .strategy-icon-box {
+        padding: 20px;
+        min-height: 120px;
+    }
+
+    .strategy-icon-box img {
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+
+    .strategy-title {
+        font-size: 18px;
+    }
+
+    .strategy-text {
+        font-size: 13px;
+    }
+
+    .strategy-list {
+        font-size: 13px;
+    }
+
+    .strategy-list li {
+        margin-bottom: 8px;
+    }
+
+    /* 슬라이드 4 & 5: 도입 및 운영 사례 */
+    .reference-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 10px;
+    }
+
+    .reference-column {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .school-badge {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+
+    .reference-title {
+        font-size: 15px;
+    }
+
+    .reference-desc {
+        font-size: 13px;
+    }
+
+    .reference-images {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .ref-image-placeholder {
+        min-height: 150px;
+    }
+
+    /* 슬라이드 5 */
+    .reference-container-2 {
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .b2c-section,
+    .event-section {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .section-badge {
+        font-size: 14px;
+        padding: 8px 20px;
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .b2c-images {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mock-image {
+        min-height: 180px;
+        padding: 50px 15px;
+    }
+
+    .image-caption {
+        font-size: 13px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .event-image-box {
+        min-height: 150px;
+        padding: 40px 15px;
+    }
+
+    .event-note {
+        font-size: 14px;
+    }
+
+    /* 슬라이드 6: 대외 활동 및 성과 */
+    .achievement-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .achievement-card {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .achievement-badge {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .achievement-image-box {
+        min-height: 180px;
+        padding: 50px 15px;
+    }
+
+    .achievement-list {
+        font-size: 13px;
+    }
+
+    .achievement-list li {
+        margin-bottom: 8px;
+    }
+
+    /* 슬라이드 7: 학교 리워드 재원 */
+    .table-container {
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .funding-table {
+        font-size: 12px;
+    }
+
+    .funding-table th {
+        font-size: 16px;
+        padding: 15px 10px;
+    }
+
+    .funding-table td {
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+
+    /* 슬라이드 8: 도입효과 */
+    .effect-section {
+        gap: 30px;
+        padding: 30px 10px;
+    }
+
+    .main-message {
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+
+    .effect-boxes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .effect-box {
+        padding: 30px 20px;
+    }
+
+    .effect-title {
+        font-size: 20px;
+    }
+
+    .effect-content {
+        font-size: 14px;
     }
 
     .process-flow {
         flex-direction: column;
+        gap: 15px;
+        padding: 25px 30px;
+        border-radius: 30px;
+    }
+
+    .process-step {
+        font-size: 16px;
+        padding: 12px 25px;
     }
 
     .arrow-right {
         transform: rotate(90deg);
+        width: 4px;
+        height: 20px;
+    }
+
+    .arrow-right::after {
+        top: 50%;
+        left: -6px;
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    .closing-message {
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.5;
+    }
+
+    .quote {
+        font-size: 36px;
+    }
+}
+
+/* 작은 모바일 - 480px 이하 */
+@media (max-width: 480px) {
+    .header-logo img {
+        width: 100px;
+    }
+
+    .header-menu {
+        width: 220px;
+    }
+
+    .header-menu li a {
+        font-size: 1rem;
+    }
+
+    .presentation {
+        width: 98%;
+        padding-top: 130px;
+    }
+
+    .slide {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text,
+    .strategy-text,
+    .strategy-list,
+    .reference-desc,
+    .achievement-list {
+        font-size: 12px;
+    }
+
+    .value-card,
+    .strategy-card,
+    .achievement-card {
+        padding: 20px 12px;
+    }
+
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-message {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .effect-title {
+        font-size: 18px;
+    }
+
+    .effect-content {
+        font-size: 13px;
+    }
+
+    .process-step {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .closing-message {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .quote {
+        font-size: 28px;
+    }
+
+    .funding-table th {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+
+    .funding-table td {
+        padding: 12px 8px;
+        font-size: 11px;
     }
 }
