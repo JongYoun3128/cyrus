@@ -161,7 +161,9 @@ body {
     justify-content: center;
     margin-bottom: 25px;
 }
-
+.icon-circle img {
+    width: 60px;
+}
 .card-icon {
     width: 55px;
     height: 55px;
@@ -758,7 +760,6 @@ body {
     }
 
     .header-menu.active {
-        top: 5%;
         right: 0;
     }
     .header-menu li {

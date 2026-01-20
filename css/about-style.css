@@ -646,7 +646,6 @@ body {
     }
 
     .header-menu.active {
-        top: 5%;
         right: 0;
     }
 
