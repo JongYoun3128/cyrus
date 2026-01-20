@@ -80,21 +80,6 @@ body {
 .hamburger-btn.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-body {
-    font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
-    line-height: 1.6;
-}
-
 /* Common Styles */
 .section {
     width: 80%;

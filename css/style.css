@@ -197,7 +197,7 @@ body {
 /* Point Section Styles */
 .point {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .point h1 {
@@ -321,6 +321,7 @@ body {
 }
 .use {
     margin-bottom: 50px;
+    margin-top: 150px;
 }
 .wide img {
     width: 100%;
@@ -382,7 +383,7 @@ body {
     }
 
     .header-menu.active {
-        top: 5%;
+        top: 4%;
         right: 0;
     }
 
@@ -480,7 +481,7 @@ body {
 
     /* 특장점 섹션 */
     .point {
-        margin-top: 60px;
+        margin-top: 150px;
     }
 
     .point h1 {
@@ -525,6 +526,7 @@ body {
     .use h1 {
         font-size: 2rem;
         margin-bottom: 40px;
+        margin-top: 150px;
     }
 
     .box-img {
