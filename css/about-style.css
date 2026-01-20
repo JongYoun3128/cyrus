@@ -56,13 +56,13 @@ body {
 }
 
 .hamburger-btn:hover {
-    background: rgba(77, 184, 168, 0.1);
+    background: rgba(62, 164, 128, 0.1);
 }
 
 .hamburger-btn span {
     width: 100%;
     height: 4px;
-    background-color: #4db8a8;
+    background-color: #3ea480;
     border-radius: 3px;
     transition: all 0.3s ease;
     display: block;
@@ -404,7 +404,13 @@ body {
     font-size: 14px;
     color: #555;
 }
-
+.step2 {
+    background: #e0e0e0;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: #555;
+}
 .arrow {
     color: #999;
     font-size: 20px;
@@ -734,7 +740,7 @@ body {
 
     /* 섹션 기본 설정 */
     .section {
-        width: 100%;
+        width: 90%;
         padding: 20px 15px;
         min-height: auto;
         margin-top: 130px;
@@ -935,7 +941,7 @@ body {
     }
 
     .step {
-        padding: 12px 20px;
+        padding: 5px;
         font-size: 13px;
         width: 100%;
         text-align: center;
@@ -956,7 +962,9 @@ body {
         gap: 20px;
         align-items: center;
     }
-
+    .mockup2 {
+        flex-direction: row;
+    }
     .phone-screen {
         width: 140px;
         height: 280px;
