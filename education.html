@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Document</title>
+        <title>교육 프레젠테이션</title>
+        <link rel="stylesheet" href="./css/edu-styles.css" />
     </head>
     <body>
         <div class="header">
@@ -18,15 +18,688 @@
                 <li><a href="#">문의</a></li>
             </ul>
         </div>
-        <div class="content">
-            <img src="images/edu1.png" alt="" />
-            <img src="images/edu2.png" alt="" />
-            <img src="images/edu3.png" alt="" />
-            <img src="images/edu7.png" alt="" />
-            <img src="images/edu8.png" alt="" />
-            <img src="images/edu4.png" alt="" />
-            <img src="images/edu5.png" alt="" />
-            <img src="images/edu6.png" alt="" />
+        <div class="presentation">
+            <!-- 슬라이드 2: 핵심 가치 -->
+            <div class="slide" id="slide2">
+                <div class="slide-header">
+                    <h3 class="subtitle">Core Value</h3>
+                    <h1 class="title">핵심 가치</h1>
+                </div>
+                <div class="cards-container">
+                    <div class="value-card">
+                        <div class="icon-circle">
+                            <svg
+                                class="card-icon"
+                                viewBox="0 0 64 64"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M32 20 Q20 28 20 36 Q20 44 26 48 Q32 52 38 48 Q44 44 44 36 Q44 28 32 20"
+                                    stroke="white"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M24 34 Q28 30 32 30 Q36 30 40 34"
+                                    stroke="white"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">건강한 습관 형성</h2>
+                        <p class="card-text">
+                            WHO 권장! 하루 60분 운동으로 심폐 건강을 강화하고
+                            집중력과 건강한 습관을 길러요.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="icon-circle">
+                            <svg
+                                class="card-icon"
+                                viewBox="0 0 64 64"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle
+                                    cx="32"
+                                    cy="32"
+                                    r="16"
+                                    stroke="white"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <circle cx="32" cy="32" r="3" fill="white" />
+                                <path
+                                    d="M32 16 L32 20 M32 44 L32 48 M16 32 L20 32 M44 32 L48 32"
+                                    stroke="white"
+                                    stroke-width="2"
+                                />
+                                <path
+                                    d="M24 24 L26 26 M38 38 L40 40 M24 40 L26 38 M38 26 L40 24"
+                                    stroke="white"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">미래 진로 탐색</h2>
+                        <p class="card-text">
+                            청소년기의 경험이 진로에 큰 영향을 미치므로,
+                            에너지·환경·헬스케어 분야에 큰 관심을 기져봐요!
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="icon-circle">
+                            <svg
+                                class="card-icon"
+                                viewBox="0 0 64 64"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M20 24 L26 20 L26 32 L20 36 Z"
+                                    fill="white"
+                                />
+                                <path
+                                    d="M28 18 L34 14 L34 36 L28 40 Z"
+                                    fill="white"
+                                />
+                                <path
+                                    d="M36 24 L42 20 L42 42 L36 46 Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">탄소 저감 실천</h2>
+                        <p class="card-text">
+                            한 학급(20명 기준)이 하루 1시간씩 주 3회
+                            사이러스바이크를 타면, 연간 최대 130kg CO₂ 절감,
+                            편백나무 12그루 심는 효과!
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="icon-circle">
+                            <svg
+                                class="card-icon"
+                                viewBox="0 0 64 64"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle
+                                    cx="32"
+                                    cy="32"
+                                    r="16"
+                                    stroke="white"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M28 28 L32 24 L36 28"
+                                    stroke="white"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <rect
+                                    x="30"
+                                    y="28"
+                                    width="4"
+                                    height="12"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                        <h2 class="card-title">운동·보상 선순환</h2>
+                        <p class="card-text">
+                            보상이 주어지면 운동 지속률이 50%이상 증가!
+                            운동할수록 리워드를 받아 즐겁고 꾸준한 운동 습관을
+                            만들어요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 슬라이드 3: 교육적 활용 방안 -->
+            <div class="slide" id="slide3">
+                <div class="slide-header">
+                    <h3 class="subtitle">Educational Application Strategies</h3>
+                    <h1 class="title">교육적 활용 방안</h1>
+                </div>
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <div class="strategy-icon-box">
+                            <svg
+                                class="strategy-icon"
+                                viewBox="0 0 120 100"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M60 20 L50 30 L40 30 L30 40 L30 70 L50 70 L60 60 L70 60 L90 70 L90 40 L80 30 L70 30 Z"
+                                    stroke="#2D7A5F"
+                                    stroke-width="3"
+                                    fill="none"
+                                />
+                                <circle
+                                    cx="45"
+                                    cy="45"
+                                    r="8"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <circle
+                                    cx="75"
+                                    cy="45"
+                                    r="8"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M60 35 L60 20 L65 15 L70 20 L70 30"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </div>
+                        <h2 class="strategy-title">
+                            친환경<br />동아리 프로그램
+                        </h2>
+                        <p class="strategy-text">
+                            학생들이 직접 전기 생산을 체험하며 탄소 저감 실천<br /><br />사이러스바이크를
+                            활용한 학교 내 에너지 절감 프로젝트
+                        </p>
+                    </div>
+
+                    <div class="strategy-card">
+                        <div class="strategy-icon-box">
+                            <svg
+                                class="strategy-icon"
+                                viewBox="0 0 120 100"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M60 25 Q50 35 50 50 Q50 60 55 65"
+                                    stroke="#2D7A5F"
+                                    stroke-width="3"
+                                    fill="none"
+                                />
+                                <circle cx="60" cy="40" r="6" fill="#2D7A5F" />
+                                <rect
+                                    x="35"
+                                    y="55"
+                                    width="10"
+                                    height="20"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <rect
+                                    x="55"
+                                    y="45"
+                                    width="10"
+                                    height="30"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <rect
+                                    x="75"
+                                    y="50"
+                                    width="10"
+                                    height="25"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M30 75 L90 75"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </div>
+                        <h2 class="strategy-title">
+                            건강 증진 &<br />체육 수업 연계
+                        </h2>
+                        <ul class="strategy-list">
+                            <li>
+                                • 체육 수업에서 유산소 운동 기구로 활용하여
+                                건강한 운동 습관 형성
+                            </li>
+                            <li>• 운동량 측정 & 목표 설정 프로그램 운영</li>
+                        </ul>
+                    </div>
+
+                    <div class="strategy-card">
+                        <div class="strategy-icon-box">
+                            <svg
+                                class="strategy-icon"
+                                viewBox="0 0 120 100"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle
+                                    cx="40"
+                                    cy="35"
+                                    r="8"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <rect
+                                    x="25"
+                                    y="45"
+                                    width="30"
+                                    height="25"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <rect
+                                    x="60"
+                                    y="30"
+                                    width="35"
+                                    height="25"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <path
+                                    d="M65 35 L90 35 M65 40 L90 40 M65 45 L90 45 M65 50 L90 50"
+                                    stroke="#2D7A5F"
+                                    stroke-width="1.5"
+                                />
+                                <circle cx="75" cy="35" r="3" fill="#2D7A5F" />
+                                <circle cx="85" cy="35" r="3" fill="#2D7A5F" />
+                                <circle cx="75" cy="45" r="3" fill="#2D7A5F" />
+                            </svg>
+                        </div>
+                        <h2 class="strategy-title">
+                            융합형 창의 교육<br />(진로탐색)
+                        </h2>
+                        <ul class="strategy-list">
+                            <li>
+                                • 전기 생산 원리, 탄소 저감 효과를 배우는 과학
+                                실험 활동
+                            </li>
+                            <li>
+                                • 에너지·환경·헬스케어 등 다양한 분야에 대한
+                                진로 탐색 기회 제공
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="strategy-card">
+                        <div class="strategy-icon-box">
+                            <svg
+                                class="strategy-icon"
+                                viewBox="0 0 120 100"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle cx="60" cy="30" r="8" fill="#2D7A5F" />
+                                <path
+                                    d="M50 35 L50 50 M70 35 L70 50"
+                                    stroke="#2D7A5F"
+                                    stroke-width="3"
+                                />
+                                <path
+                                    d="M50 50 L45 60 M50 50 L55 60"
+                                    stroke="#2D7A5F"
+                                    stroke-width="3"
+                                />
+                                <path
+                                    d="M70 50 L65 60 M70 50 L75 60"
+                                    stroke="#2D7A5F"
+                                    stroke-width="3"
+                                />
+                                <circle
+                                    cx="35"
+                                    cy="55"
+                                    r="6"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <circle
+                                    cx="85"
+                                    cy="55"
+                                    r="6"
+                                    stroke="#2D7A5F"
+                                    stroke-width="2"
+                                    fill="none"
+                                />
+                                <circle cx="25" cy="70" r="5" fill="#2D7A5F" />
+                                <circle cx="95" cy="70" r="5" fill="#2D7A5F" />
+                            </svg>
+                        </div>
+                        <h2 class="strategy-title">
+                            학생 참여형<br />프로그램
+                        </h2>
+                        <ul class="strategy-list">
+                            <li>• 체육대회에서 반 대항 챌린지 프로그램 운영</li>
+                            <li>
+                                • 앱 내 포인트 기부 기능을 활용하여 캠페인
+                                운영<br />(2026 상반기 업데이트 예정)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 슬라이드 4: 도입 및 운영 시례 (1) -->
+            <div class="slide" id="slide4">
+                <div class="slide-header">
+                    <h3 class="subtitle">Reference Sites in Operation</h3>
+                    <h1 class="title">도입 및 운영 시례</h1>
+                </div>
+                <div class="reference-container">
+                    <div class="reference-column">
+                        <div class="school-badge">창원 반림중학교</div>
+                        <div class="reference-content">
+                            <h3 class="reference-title">
+                                • 사이러스 바이크 활용 친환경 행사 / 프로그램
+                            </h3>
+                            <p class="reference-desc">
+                                2025 환경의 날 및 녹동강의 날' 통합 기념 행사
+                                참여<br />교내 행사 '반림 축제 한마당' 사이러스
+                                바이크 체험 이벤트 운영
+                            </p>
+
+                            <h3 class="reference-title">
+                                • 체육 교과 연계 - 유산소 운동
+                            </h3>
+
+                            <div class="reference-images">
+                                <div
+                                    class="ref-image-placeholder detail1"
+                                ></div>
+                                <div
+                                    class="ref-image-placeholder detail2"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reference-column">
+                        <div class="school-badge">부산 동래여자고등학교</div>
+                        <div class="reference-content">
+                            <h3 class="reference-title">
+                                • 교내 기후행동 프로그램 운영
+                            </h3>
+                            <p class="reference-desc">
+                                '동래여고와 함께하는 탄소저감 기후행동!' 이벤트
+                                운영
+                            </p>
+
+                            <h3 class="reference-title">
+                                • 자기주도 활동형 포인트 기부 연계 (예정)
+                            </h3>
+
+                            <div class="reference-images">
+                                <div
+                                    class="ref-image-placeholder detail3"
+                                ></div>
+                                <div
+                                    class="ref-image-placeholder detail4"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 슬라이드 5: 도입 및 운영 시례 (2) -->
+            <div class="slide" id="slide5">
+                <div class="slide-header">
+                    <h3 class="subtitle">Reference Sites in Operation</h3>
+                    <h1 class="title">도입 및 운영 시례</h1>
+                </div>
+                <div class="reference-container-2">
+                    <div class="b2c-section">
+                        <div class="section-badge green">B2C 실적</div>
+                        <h3 class="section-title">
+                            네이버 스토어 온라인 몰 판매 250대 이상
+                        </h3>
+
+                        <div class="b2c-images">
+                            <div class="b2c-image-box">
+                                <div class="mock-image detail5"></div>
+                                <p class="image-caption">S2B</p>
+                            </div>
+                            <div class="b2c-image-box">
+                                <div class="mock-image detail6"></div>
+                                <p class="image-caption">
+                                    네이버 스토어·온라인 몰
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-section">
+                        <div class="section-badge green">
+                            사이러스 바이크 지원 행사
+                        </div>
+
+                        <div class="event-grid">
+                            <div class="event-image-box detail7"></div>
+                            <div class="event-image-box detail8"></div>
+                            <div class="event-image-box detail9"></div>
+                            <div class="event-image-box detail10"></div>
+                            <div class="event-image-box detail11"></div>
+                            <div class="event-image-box detail12"></div>
+                        </div>
+
+                        <p class="event-note">
+                            + 25년 하반기(11월) 울산 ○○학교 행사 지원 예정
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 슬라이드 6: 대외 활동 및 성과 -->
+            <div class="slide" id="slide6">
+                <div class="slide-header">
+                    <h3 class="subtitle">Activities & Achievements</h3>
+                    <h1 class="title">대외 활동 및 성과</h1>
+                </div>
+                <div class="achievement-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-badge">정부 지원 사업 참여</div>
+                        <div class="achievement-image-box detail13"></div>
+                        <ul class="achievement-list">
+                            <li>
+                                • 2025 의상명 사업선도를 위한 산학협력 기업지원
+                                사업
+                            </li>
+                            <li>• 2025 고령친화 산업 육성지원 사업 선정</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-badge">대외 언론 성과</div>
+                        <div class="achievement-image-box detail14">
+                            <div class="media-snippet"></div>
+                        </div>
+                        <ul class="achievement-list">
+                            <li>
+                                • 청소년 참여형 운동·친환경 교육 플랫폼으로 주요
+                                언론 소개
+                            </li>
+                            <li>
+                                • '페달 굴려 돈 받하고, 방향 든는 대양광… 이런
+                                기후테크 뜬다'-한겨례 신문
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-badge">국제 박람회 참여</div>
+                        <div class="achievement-image-box detail15"></div>
+                        <ul class="achievement-list">
+                            <li>
+                                • 2025 기후산업국제박람회<br />탄소중립 EXPO
+                                참가 (부산 BEXCO)
+                            </li>
+                            <li>
+                                • 탄소 중립 실현을 위한 혁신적 운동·에너지
+                                솔루션을 비땅으로 사이러스 바이크 체험
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 슬라이드 7: 학교 리워드 재원 활용 구조 -->
+            <div class="slide" id="slide7">
+                <div class="slide-header">
+                    <h3 class="subtitle">School Reward Funding Structure</h3>
+                    <h1 class="title">학교 리워드 재원 활용 구조</h1>
+                </div>
+                <div class="table-container">
+                    <table class="funding-table">
+                        <thead>
+                            <tr>
+                                <th>재원 항목</th>
+                                <th>활용 방식</th>
+                                <th>특징</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cell-title">학교 운영비</td>
+                                <td>
+                                    학교 자율 예산(교육, 복지, NET-ZERO,
+                                    건강활동 등)
+                                </td>
+                                <td class="cell-gray">
+                                    운동장려, 인센티브(디지털 문방구 리워드)지급
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-title">
+                                    학생복지 중진비 / 건강 증진비
+                                </td>
+                                <td>학생 체력, 정신건강, 생활지도 목적 예산</td>
+                                <td class="cell-gray">
+                                    "운동기반 건강증진 프로그램" 명목 예산<br />식슬관,
+                                    비만예방 등
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-title">방과후 학교 운영비</td>
+                                <td>
+                                    방과후 프로그램 참여 유도를 위한 보상 지급
+                                </td>
+                                <td class="cell-gray">
+                                    운동 포인트 적립 → 방과후 참여 유도
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-title">
+                                    학교 제육활동비(제육용품비)
+                                </td>
+                                <td>체육 기자재, 운동 활동 프로그램 운영 등</td>
+                                <td class="cell-gray">
+                                    비경형 체육활동(바이크 활동 등)<br />참여
+                                    학생에게 리워드 제공 시 예산 활용 가능
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-title">특별교부금(특교비)</td>
+                                <td>지자체 또는 교육청의 특별 사업 지원</td>
+                                <td class="cell-gray">
+                                    '디지털 헬스케어 운동 활성화 사업' 등으로
+                                    신청,<br />리워드는 강력한 운동 동기 유발
+                                    수단
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-title">
+                                    교육청 공모 사업비 / 학교지을사업 예산
+                                </td>
+                                <td>
+                                    탄소중립·AI·체험·건강생활 실천 등 공모/지원
+                                    사업
+                                </td>
+                                <td class="cell-gray">
+                                    사이러스 바이크 + 운동 포인트 + 리워드
+                                    시스템<br />융합 모델 제안 가능
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 슬라이드 8: 도입효과 및 기대 성과 -->
+            <div class="slide" id="slide8">
+                <div class="slide-header">
+                    <h3 class="subtitle">SEOHAN INNOTEK</h3>
+                    <h1 class="title">도입효과 및 기대 성과</h1>
+                </div>
+                <div class="effect-section">
+                    <div class="main-message">학생의 실천이 만드는 선순환</div>
+
+                    <div class="effect-boxes">
+                        <div class="effect-box">
+                            <h3 class="effect-title">환경적 영향</h3>
+                            <p class="effect-content">
+                                연간 130kg CO₂ 절감<br />에너지 생산 가능
+                            </p>
+                        </div>
+
+                        <div class="effect-box">
+                            <h3 class="effect-title">학생 성장</h3>
+                            <p class="effect-content">
+                                자발적 운동 참여 건강 증진<br />진로 탐색 기회
+                                제공
+                            </p>
+                        </div>
+
+                        <div class="effect-box">
+                            <h3 class="effect-title">학교 차원 성과</h3>
+                            <p class="effect-content">
+                                ESG 실천<br />환경 교육 캠페인 운영
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-flow">
+                        <div class="process-step">실천</div>
+                        <div class="arrow-right"></div>
+                        <div class="process-step">데이터 기록</div>
+                        <div class="arrow-right"></div>
+                        <div class="process-step">포인트 보상</div>
+                        <div class="arrow-right"></div>
+                        <div class="process-step">동기 유발</div>
+                        <div class="arrow-right"></div>
+                        <div class="process-step">지속적 실천</div>
+                    </div>
+
+                    <div class="closing-message">
+                        <span class="quote">"</span>
+                        친환경 실천의 습관화로 ESG 교육의 실효성을 높입니다
+                        <span class="quote">"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 네비게이션 -->
+            <div class="navigation">
+                <button class="nav-btn" id="prevBtn">◀ 이전</button>
+                <span class="page-indicator"
+                    ><span id="currentSlide">1</span> / 7</span
+                >
+                <button class="nav-btn" id="nextBtn">다음 ▶</button>
+            </div>
         </div>
+
+        <script src="./js/edu-script.js"></script>
     </body>
 </html>
