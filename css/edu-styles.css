@@ -153,7 +153,8 @@ body {
 .icon-circle {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, #6ec9a8 0%, #3ba587 100%);
+
+    background-color: #4a70f2;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -252,7 +253,7 @@ body {
 }
 
 .school-badge {
-    background: linear-gradient(135deg, #3ba587 0%, #2d7a5f 100%);
+    background-color: #4a70f2;
     color: white;
     font-size: 18px;
     font-weight: 700;
@@ -410,7 +411,7 @@ body {
 }
 
 .section-badge.green {
-    background: linear-gradient(135deg, #3ba587 0%, #2d7a5f 100%);
+    background-color: #4a70f2;
     color: white;
 }
 
@@ -484,7 +485,7 @@ body {
 }
 
 .achievement-badge {
-    background: linear-gradient(135deg, #3ba587 0%, #2d7a5f 100%);
+    background-color: #4a70f2;
     color: white;
     font-size: 16px;
     font-weight: 700;
@@ -533,7 +534,7 @@ body {
 }
 
 .funding-table thead {
-    background: linear-gradient(135deg, #3ba587 0%, #2d7a5f 100%);
+    background-color: #4a70f2;
 }
 
 .funding-table th {
@@ -578,9 +579,10 @@ body {
 .main-message {
     font-size: 32px;
     font-weight: 700;
-    color: #2d7a5f;
+
+    background-color: #4a70f2;
     padding: 20px 40px;
-    border: 3px solid #3ba587;
+    border: 3px solid #4a70f2;
     border-radius: 50px;
     background: white;
 }
@@ -618,7 +620,8 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: linear-gradient(135deg, #6ec9a8 0%, #3ba587 100%);
+
+    background-color: #4a70f2;
     padding: 30px 50px;
     border-radius: 50px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -626,7 +629,7 @@ body {
 
 .process-step {
     background: white;
-    color: #2d7a5f;
+    color: #4a70f2;
     font-size: 18px;
     font-weight: 700;
     padding: 15px 30px;

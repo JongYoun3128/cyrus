@@ -230,7 +230,7 @@ body {
 }
 
 .result-box {
-    background: linear-gradient(135deg, #4db8a8 0%, #5fc9b8 100%);
+    background-color: #4a70f2;
     color: white;
     padding: 30px;
     border-radius: 20px;
@@ -274,7 +274,7 @@ body {
 }
 
 .highlight-box {
-    background: linear-gradient(135deg, #4db8a8 0%, #5fc9b8 100%);
+    background-color: #4a70f2;
     color: white;
     padding: 20px;
     border-radius: 15px;
@@ -568,7 +568,7 @@ body {
 
 .bar {
     width: 60px;
-    background: linear-gradient(180deg, #4db8a8 0%, #3a9b8d 100%);
+    background: #4a70f2;
     border-radius: 5px 5px 0 0;
     position: relative;
     display: flex;
