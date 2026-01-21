@@ -77,12 +77,20 @@ body {
     opacity: 0;
     transform: translateX(-20px);
 }
-
+.small {
+    display: none;
+}
 .hamburger-btn.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
 .home img {
     width: 100%;
+}
+.home2 {
+    text-align: center;
+}
+.home2 img {
+    width: 80%;
 }
 /* Common Styles */
 .section {
@@ -498,7 +506,7 @@ body {
 
 .bar {
     width: 60px;
-    background: #4a70f2;
+    background: #3ea480;
     border-radius: 5px 5px 0 0;
     position: relative;
     display: flex;
@@ -997,5 +1005,8 @@ body {
     }
     .wide2 {
         display: none;
+    }
+    .home2 img {
+        width: 100%;
     }
 }
