@@ -29,6 +29,17 @@ body {
     user-select: none;
 }
 
+.fix {
+    background-color: #3ea480c9;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 2%;
+    z-index: 9999999;
+}
+.fix img {
+    width: 50px;
+}
 .header {
     width: 100%;
     display: flex;
