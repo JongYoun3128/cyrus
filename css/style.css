@@ -375,6 +375,13 @@ body {
     margin-bottom: 50px;
     text-align: center;
 }
+.home {
+    margin-top: 80px;
+    text-align: center;
+}
+.home img {
+    width: 90%;
+}
 /* 모바일 반응형 - 768px 이하 */
 @media (max-width: 768px) {
     /* 헤더 */
@@ -668,6 +675,9 @@ body {
     .wide {
         display: none;
     }
+    .wide2 {
+        display: none;
+    }
     .small {
         display: block;
     }
@@ -686,5 +696,8 @@ body {
     }
     .license-list {
         margin-top: 0;
+    }
+    .home img {
+        width: 100%;
     }
 }
