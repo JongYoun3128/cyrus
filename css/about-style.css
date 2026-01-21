@@ -599,9 +599,7 @@ body {
 .wide {
     display: block;
 }
-.small {
-    display: none;
-}
+
 /* Responsive */
 @media (max-width: 1200px) {
     .overview-content,
@@ -1010,7 +1008,11 @@ body {
     .wide2 {
         display: none;
     }
+
     .home2 img {
-        width: 100%;
+        width: 80%;
+    }
+    .home2 .small {
+        margin: 0 auto;
     }
 }
