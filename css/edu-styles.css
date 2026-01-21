@@ -88,6 +88,9 @@ body {
 .hamburger-btn.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
+.home img {
+    width: 100%;
+}
 .presentation {
     padding-top: 100px;
     padding-bottom: 60px;
@@ -1088,9 +1091,11 @@ body {
 
     .presentation {
         width: 98%;
-        padding-top: 130px;
+        padding-top: 30px;
     }
-
+    .home {
+        margin-top: 75px;
+    }
     .slide {
         padding: 20px 15px;
         margin-bottom: 20px;

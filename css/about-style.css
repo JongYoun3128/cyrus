@@ -17,6 +17,7 @@ body {
     font-family: "Noto Sans", sans-serif;
     width: 100%;
 }
+
 .header {
     width: 100%;
     display: flex;
@@ -79,6 +80,9 @@ body {
 
 .hamburger-btn.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
+}
+.home img {
+    width: 100%;
 }
 /* Common Styles */
 .section {
@@ -677,7 +681,7 @@ body {
     }
 
     .section:first-of-type {
-        margin-top: 140px;
+        margin-top: 40px;
     }
 
     /* 헤더 라인 */
@@ -933,7 +937,9 @@ body {
     .header-menu li a {
         font-size: 1rem;
     }
-
+    .home {
+        padding-top: 80px;
+    }
     .section {
         padding: 15px 10px;
     }
