@@ -213,7 +213,7 @@ body {
 /* Point Section Styles */
 .point {
     width: 100%;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .point h1 {
@@ -535,12 +535,12 @@ body {
 
     /* 특장점 섹션 */
     .point {
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
     .point h1 {
         font-size: 2rem;
-        margin-bottom: 40px;
+        margin-bottom: 0;
     }
 
     .point-list {
@@ -575,12 +575,12 @@ body {
     /* 사용방법 섹션 */
     .use {
         margin-top: 60px;
+        margin-bottom: 0;
     }
 
     .use h1 {
         font-size: 2rem;
         margin-bottom: 40px;
-        margin-top: 150px;
     }
 
     .box-img {
@@ -663,6 +663,9 @@ body {
     .use h1 {
         font-size: 1.5rem;
     }
+    .project h1 {
+        margin-top: 30px;
+    }
     .point-item h3 {
         font-size: 1.5rem;
     }
@@ -719,6 +722,7 @@ body {
     }
     .product {
         flex-direction: column;
+        margin-top: 50px;
     }
     .product img {
         width: 100%;
