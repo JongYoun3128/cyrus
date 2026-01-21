@@ -150,7 +150,26 @@ body {
     width: 50px;
     height: 50px;
 }
-
+.product {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+.product img {
+    margin-bottom: 20px;
+}
+.product h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4a70f2;
+}
+.product p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
 /* Detail Image Swiper Styles */
 .detail-img {
     width: 100%;
@@ -699,5 +718,17 @@ body {
     }
     .home img {
         width: 100%;
+    }
+    .product {
+        flex-direction: column;
+    }
+    .product img {
+        width: 100%;
+    }
+    .product p {
+        font-size: 1rem;
+    }
+    .product h3 {
+        font-size: 1.3rem;
     }
 }
