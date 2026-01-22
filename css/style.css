@@ -27,6 +27,84 @@ html {
     overflow-x: hidden;
 }
 
+/* Section 1: Overview */
+
+.overview-content {
+    display: flex;
+    gap: 60px;
+}
+
+.overview-left {
+    flex: 1;
+}
+
+.overview-left h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.point-item {
+    background: #f8fbfb;
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.point-number {
+    color: #4db8a8;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.point-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.point-item p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.icon-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4db8a8;
+    border-radius: 10px;
+    background: white;
+}
+
+.overview-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bike-image {
+    width: 100%;
+    max-width: 600px;
+}
+
 /* 애니메이션 초기 상태 */
 .animate {
     opacity: 0;
@@ -654,6 +732,43 @@ html {
     .header-menu li a:hover {
         color: #3ea480;
     }
+    /* Section 1: Overview */
+    .overview-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .overview-left h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .points-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .point-item {
+        padding: 20px;
+    }
+
+    .point-number {
+        font-size: 18px;
+    }
+
+    .point-item h3 {
+        font-size: 16px;
+    }
+
+    .point-item p {
+        font-size: 13px;
+    }
+
+    .bike-image {
+        max-width: 100%;
+        height: auto;
+    }
 
     /* 메인 섹션 */
 
@@ -813,7 +928,7 @@ html {
 }
 
 /* 작은 모바일 - 480px 이하 */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     /* box-list 무한 루프 (작은 모바일) */
 
     .box-list li {
@@ -943,5 +1058,19 @@ html {
     }
     .product h3 {
         font-size: 1.3rem;
+    }
+
+    /* 나중추가분 */
+
+    .section-title {
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .overview-left h2 {
+        color: #4a70f2;
+    }
+    .point-item {
+        width: fit-content;
     }
 }
