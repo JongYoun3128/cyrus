@@ -38,14 +38,20 @@
             <img src="images/main2.gif" alt="" />
         </div>
         <!-- Section 1: CYRUS BIKE Overview -->
-        <section class="section section-1 animate" data-animation="slide-right">
+        <section
+            class="section section-1 animate wide"
+            data-animation="slide-right"
+        >
             <div class="header-line"></div>
             <div class="section-title">
                 <h1>사이러스 바이크 개요</h1>
             </div>
             <div class="content-card">
                 <div class="overview-content">
-                    <div class="overview-left animate" data-animation="slide-left">
+                    <div
+                        class="overview-left animate"
+                        data-animation="slide-left"
+                    >
                         <h2>CYRUS BIKE POINT</h2>
                         <div class="points-grid">
                             <div class="point-item">
@@ -84,7 +90,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="overview-right animate" data-animation="zoom-in">
+                    <div
+                        class="overview-right animate"
+                        data-animation="zoom-in"
+                    >
                         <img
                             src="images/detail3.jpg"
                             alt="CYRUS BIKE"
@@ -102,7 +111,10 @@
                 <h1>사이러스 바이크 전력생산</h1>
             </div>
             <div class="performance-cards">
-                <div class="perf-card perf-card-left animate" data-animation="slide-left">
+                <div
+                    class="perf-card perf-card-left animate"
+                    data-animation="slide-left"
+                >
                     <h2>사이러스 바이크 1시간 운동 = 100Wh</h2>
                     <p class="perf-subtitle">
                         (생언 날씨 평균 전력 생산량 기준)
@@ -118,7 +130,10 @@
                         <p class="small-text">(= 1,418kWh = 1.4MWh)</p>
                     </div>
                 </div>
-                <div class="perf-card perf-card-right animate" data-animation="slide-right">
+                <div
+                    class="perf-card perf-card-right animate"
+                    data-animation="slide-right"
+                >
                     <div class="comparison-item">
                         <div class="comparison-text">
                             <h3>월반기정(한국 기준)</h3>
@@ -345,22 +360,22 @@
             });
 
             // 스크롤 애니메이션 - Intersection Observer
-            const animateElements = document.querySelectorAll('.animate');
+            const animateElements = document.querySelectorAll(".animate");
 
             const observerOptions = {
                 threshold: 0.15,
-                rootMargin: '0px 0px -50px 0px'
+                rootMargin: "0px 0px -50px 0px",
             };
 
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
+                        entry.target.classList.add("show");
                     }
                 });
             }, observerOptions);
 
-            animateElements.forEach(element => {
+            animateElements.forEach((element) => {
                 observer.observe(element);
             });
         </script>

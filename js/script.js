@@ -26,19 +26,24 @@ if (hamburgerBtn && headerMenu) {
     });
 }
 
-// Detail Image Swiper 초기화
+// Detail Image Swiper 초기화 (lazy loading 최적화)
 const detailSwiper = new Swiper(".detail-img", {
     // 슬라이드 간격
     spaceBetween: 30,
     // 자동 재생
     autoplay: {
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
     },
     // 루프 모드
     loop: true,
     // 속도
-    speed: 800,
+    speed: 600,
+    // lazy loading
+    lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 2,
+    },
     // 페이지네이션
     pagination: {
         el: ".detail-img .swiper-pagination",
@@ -66,7 +71,7 @@ const detailSwiper = new Swiper(".detail-img", {
     },
 });
 
-// Point List Swiper 초기화
+// Point List Swiper 초기화 (성능 최적화)
 const pointSwiper = new Swiper(".point-list", {
     // 슬라이드 개수
     slidesPerView: 1,
@@ -76,13 +81,15 @@ const pointSwiper = new Swiper(".point-list", {
     spaceBetween: 30,
     // 자동 재생
     autoplay: {
-        delay: 2000,
+        delay: 3000,
         disableOnInteraction: false,
     },
     // 루프 모드
     loop: true,
     // 속도
-    speed: 1000,
+    speed: 800,
+    // lazy loading
+    lazy: true,
     // 페이지네이션
     pagination: {
         el: ".point-list .swiper-pagination",
@@ -97,18 +104,23 @@ const pointSwiper = new Swiper(".point-list", {
     effect: "slide",
 });
 
-// 스크롤 애니메이션 - Intersection Observer
+// 스크롤 애니메이션 - Intersection Observer (최적화)
 const animateElements = document.querySelectorAll('.animate');
 
 const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -80px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            // requestAnimationFrame으로 성능 최적화
+            requestAnimationFrame(() => {
+                entry.target.classList.add('show');
+            });
+            // 한 번 보이면 관찰 중지 (성능 향상)
+            obs.unobserve(entry.target);
         }
     });
 }, observerOptions);
@@ -155,18 +167,20 @@ function setupInfiniteScroll() {
     // 초기 실행
     duplicateItems();
 
-    // 윈도우 리사이즈 시 처리
+    // 윈도우 리사이즈 시 처리 (디바운스로 성능 최적화)
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            if (isMobile()) {
-                removeClones(); // 기존 복제 제거
-                duplicateItems(); // 새로 복제
-            } else {
-                removeClones();
-            }
-        }, 250);
+            requestAnimationFrame(() => {
+                if (isMobile()) {
+                    removeClones();
+                    duplicateItems();
+                } else {
+                    removeClones();
+                }
+            });
+        }, 300);
     });
 }
 
@@ -175,4 +189,40 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', setupInfiniteScroll);
 } else {
     setupInfiniteScroll();
+}
+
+// 맨 위로 스크롤 버튼
+const scrollToTopBtn = document.getElementById('scrollToTop');
+if (scrollToTopBtn) {
+    // 초기 상태 숨기기
+    scrollToTopBtn.style.opacity = '0';
+    scrollToTopBtn.style.visibility = 'hidden';
+    
+    // 스크롤 이벤트 (throttle로 성능 최적화)
+    let scrollTimer;
+    window.addEventListener('scroll', () => {
+        if (!scrollTimer) {
+            scrollTimer = setTimeout(() => {
+                scrollTimer = null;
+                requestAnimationFrame(() => {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.style.opacity = '1';
+                        scrollToTopBtn.style.visibility = 'visible';
+                    } else {
+                        scrollToTopBtn.style.opacity = '0';
+                        scrollToTopBtn.style.visibility = 'hidden';
+                    }
+                });
+            }, 100);
+        }
+    });
+    
+    // 클릭 이벤트
+    scrollToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }

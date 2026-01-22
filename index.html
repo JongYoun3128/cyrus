@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +10,11 @@
             content="https://jongyoun3128.github.io/cyrus/images/url.png"
         />
         <meta property="og:description" content="CYRUS Bike 공식파트너 " />
+
+        <!-- Preload critical resources -->
+        <link rel="preload" href="css/style.css" as="style" />
+        <link rel="preload" href="images/main.gif" as="image" />
+
         <link rel="stylesheet" href="css/style.css" />
         <!-- Swiper CSS -->
         <link
@@ -17,11 +22,13 @@
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
         <link rel="icon" href="./images/pavi.png" />
-        <title>HOME</title>
+        <title>HOME - CYRUS BIKE</title>
     </head>
     <body>
-        <div class="fix">
-            <a href="#"><img src="images/arrow2.png" alt="" /></a>
+        <div class="fix" id="scrollToTop">
+            <a href="#" aria-label="맨 위로 이동"
+                ><img src="images/arrow2.png" alt="위로 가기"
+            /></a>
         </div>
         <div class="header">
             <div class="header-logo">
@@ -40,7 +47,11 @@
             </ul>
         </div>
         <div class="main">
-            <img src="images/main.gif" alt="" />
+            <img
+                src="images/main.gif"
+                alt="CYRUS BIKE 메인 이미지"
+                loading="eager"
+            />
         </div>
         <div class="wrap">
             <div class="content">
@@ -65,49 +76,68 @@
                 <div class="content-box animate" data-animation="slide-left">
                     <ul class="box-list">
                         <li>
-                            <img src="images/icon1.png" alt="" />
+                            <img
+                                src="images/icon1.png"
+                                alt="전기발전 아이콘"
+                                loading="lazy"
+                            />
                             <p>전기발전</p>
                         </li>
                         <li>
-                            <img src="images/icon2.png" alt="" />
+                            <img
+                                src="images/icon2.png"
+                                alt="블록체인 아이콘"
+                                loading="lazy"
+                            />
                             <p>블록체인</p>
                         </li>
                         <li>
-                            <img src="images/icon3.png" alt="" />
+                            <img
+                                src="images/icon3.png"
+                                alt="운동보상 아이콘"
+                                loading="lazy"
+                            />
                             <p>운동보상</p>
                         </li>
                         <li>
-                            <img src="images/icon4.png" alt="" />
+                            <img
+                                src="images/icon4.png"
+                                alt="인테리어 아이콘"
+                                loading="lazy"
+                            />
                             <p>인테리어</p>
                         </li>
                         <li>
-                            <img src="images/icon5.png" alt="" />
+                            <img
+                                src="images/icon5.png"
+                                alt="전용어플 아이콘"
+                                loading="lazy"
+                            />
                             <p>전용어플</p>
                         </li>
                     </ul>
+                    <!-- 사이러스 바이크 개요 섹션 -->
                     <section
                         class="section section-1 animate small"
-                        data-animation="slide-right"
+                        data-animation="fade-in"
                     >
                         <div class="section-title">
                             <h1>사이러스 바이크 개요</h1>
                         </div>
                         <div class="content-card">
                             <div class="overview-content">
-                                <div
-                                    class="overview-left animate"
-                                    data-animation="slide-left"
-                                >
+                                <div class="overview-left">
                                     <h2>CYRUS BIKE POINT</h2>
                                     <div class="points-grid">
                                         <div class="point-item">
                                             <div class="point-number">01</div>
                                             <h3>전기발전</h3>
                                             <p>
-                                                운동 시 발생되는 전기는 가정에
-                                                보탬이됩니다. 친환경 에너지로
-                                                전기발전의 효과를 누릴 수
-                                                있습니다.
+                                                운동 시 발생되는 전기는<br />
+                                                가정에 보탬이됩니다.
+                                                <br />친환경 에너지로
+                                                전기발전의<br />
+                                                효과를 누릴 수 있습니다.
                                             </p>
                                         </div>
                                         <div class="point-item">
@@ -115,59 +145,77 @@
                                             <h3>운동 보상</h3>
                                             <p>
                                                 운동한 시간만큼 포인트가
-                                                적립됩니다. 포인트는 사이러스
-                                                스토어에서 다양한 상품으로 교환
-                                                가능합니다.
+                                                적립됩니다. <br />포인트는
+                                                사이러스 스토어에서<br />
+                                                다양한 상품으로 교환 가능합니다.
                                             </p>
                                         </div>
                                         <div class="point-item">
                                             <div class="point-number">03</div>
                                             <h3>친환경</h3>
                                             <p>
-                                                사이러스 바이크로 발전한 전기로
-                                                탄소저감에 기여할 수 있습니다.
+                                                사이러스 바이크로<br />
+                                                발전한 전기로 탄소저감에<br />
+                                                기여할 수 있습니다.
                                             </p>
                                         </div>
                                         <div class="point-item">
                                             <div class="point-number">04</div>
                                             <h3>전용어플</h3>
                                             <p>
-                                                사이러스 바이크 전용 어플로
+                                                사이러스 바이크 전용 어플로<br />
                                                 체계적인 운동관리 가능합니다.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="overview-right animate"
-                                    data-animation="zoom-in"
-                                >
+                                <div class="overview-right">
                                     <img
                                         src="images/detail3.jpg"
-                                        alt="CYRUS BIKE"
+                                        alt="CYRUS BIKE 제품 이미지"
                                         class="bike-image"
+                                        loading="lazy"
                                     />
                                 </div>
                             </div>
                         </div>
                     </section>
-
                     <div class="detail-img swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="images/detail1.jpg" alt="" />
+                                <img
+                                    src="images/detail1.jpg"
+                                    alt="사이러스 바이크 상세 이미지 1"
+                                    loading="lazy"
+                                />
                             </div>
                             <div class="swiper-slide">
-                                <img src="images/detail3.jpg" alt="" />
+                                <img
+                                    src="images/detail3.jpg"
+                                    alt="사이러스 바이크 상세 이미지 2"
+                                    loading="lazy"
+                                />
                             </div>
                             <div class="swiper-slide">
-                                <img src="images/detail5.jpg" alt="" />
+                                <img
+                                    src="images/detail5.jpg"
+                                    alt="사이러스 바이크 상세 이미지 3"
+                                    loading="lazy"
+                                />
                             </div>
                             <div class="swiper-slide">
-                                <img src="images/detail7.jpg" alt="" />
+                                <img
+                                    src="images/detail7.jpg"
+                                    alt="사이러스 바이크 상세 이미지 4"
+                                    loading="lazy"
+                                />
                             </div>
                             <div class="swiper-slide">
-                                <img src="images/detail8.jpg" alt="" />
+                                <img
+                                    src="images/detail8.jpg"
+                                    alt="사이러스 바이크 상세 이미지 5"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
                         <!-- 네비게이션 버튼 -->
@@ -177,9 +225,14 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
+
                 <ul class="product">
                     <li class="animate" data-animation="slide-left">
-                        <img src="images/about_img04.png" alt="" />
+                        <img
+                            src="images/about_img04.png"
+                            alt="운동을 에너지로 바꾸는 기술력"
+                            loading="lazy"
+                        />
                         <h3>운동을 에너지로 바꾸는 기술력</h3>
                         <p>
                             사이러스 바이크는 사용자의 페달링 에너지를 전기로
@@ -189,7 +242,11 @@
                         </p>
                     </li>
                     <li class="animate" data-animation="zoom-in">
-                        <img src="images/about_img05.png" alt="" />
+                        <img
+                            src="images/about_img05.png"
+                            alt="보상을 통한 동기부여"
+                            loading="lazy"
+                        />
                         <h3>보상을 통한 동기부여</h3>
                         <p>
                             사이러스 바이크는 운동한 시간에 따라 토큰 또는
@@ -198,7 +255,11 @@
                         </p>
                     </li>
                     <li class="animate" data-animation="slide-right">
-                        <img src="images/about_img06.png" alt="" />
+                        <img
+                            src="images/about_img06.png"
+                            alt="탄소중립을 실현하는 스마트 피트니스"
+                            loading="lazy"
+                        />
                         <h3 class="wide">
                             탄소중립을 실현하는 스마트 피트니스
                         </h3>
@@ -229,7 +290,11 @@
                                         효과를 가져올 수 있게 <br />설계되어
                                         있습니다.
                                     </p>
-                                    <img src="images/point1.png" alt="" />
+                                    <img
+                                        src="images/point1.png"
+                                        alt="전기발전 특징"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -241,7 +306,11 @@
                                         쇼핑몰에서 <br />다양한 상품으로 교환할
                                         수 있습니다.
                                     </p>
-                                    <img src="images/point2.png" alt="" />
+                                    <img
+                                        src="images/point2.png"
+                                        alt="블록체인 보상 시스템"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -253,7 +322,11 @@
                                         바이크는 탄소를 줄이고 <br />전기를
                                         만드는 헬스케어 플랫폼입니다.
                                     </p>
-                                    <img src="images/point3.png" alt="" />
+                                    <img
+                                        src="images/point3.png"
+                                        alt="세련된 디자인"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -266,7 +339,11 @@
                                         <br />고급스러운 디자인으로 제작
                                         되었습니다.
                                     </p>
-                                    <img src="images/point4.png" alt="" />
+                                    <img
+                                        src="images/point4.png"
+                                        alt="스마트 연동 기능"
+                                        loading="lazy"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -289,7 +366,11 @@
                                         <br />회원가입을 해주세요.
                                     </p>
                                 </div>
-                                <img src="images/use1.png" alt="" />
+                                <img
+                                    src="images/use1.png"
+                                    alt="어플 설치 및 회원가입"
+                                    loading="lazy"
+                                />
                             </li>
                             <li class="animate" data-animation="slide-right">
                                 <div class="box-text">
@@ -299,7 +380,11 @@
                                         <br />장비연결을 클릭해주세요.
                                     </p>
                                 </div>
-                                <img src="images/use2.png" alt="" />
+                                <img
+                                    src="images/use2.png"
+                                    alt="장비 연결"
+                                    loading="lazy"
+                                />
                             </li>
                             <li class="animate" data-animation="fade-in">
                                 <div class="box-text">
@@ -309,7 +394,11 @@
                                         <br />QR코드를 인식해주세요.
                                     </p>
                                 </div>
-                                <img src="images/use3.png" alt="" />
+                                <img
+                                    src="images/use3.png"
+                                    alt="QR코드 인식"
+                                    loading="lazy"
+                                />
                             </li>
                             <li class="animate" data-animation="slide-left">
                                 <div class="box-text">
@@ -319,7 +408,11 @@
                                         <br />안내에 따라 바이크 안정화 시작
                                     </p>
                                 </div>
-                                <img src="images/use4.png" alt="" />
+                                <img
+                                    src="images/use4.png"
+                                    alt="블루투스 연결 및 안정화"
+                                    loading="lazy"
+                                />
                             </li>
                             <li class="animate" data-animation="zoom-in">
                                 <div class="box-text">
@@ -329,7 +422,11 @@
                                         <br />자유롭게 운동해주세요.
                                     </p>
                                 </div>
-                                <img src="images/use5.png" alt="" />
+                                <img
+                                    src="images/use5.png"
+                                    alt="운동 시작"
+                                    loading="lazy"
+                                />
                             </li>
                         </ul>
                     </div>
@@ -338,10 +435,18 @@
                 <section class="project animate" data-animation="rotate-in">
                     <h1>PROJECT</h1>
                     <div class="wide">
-                        <img src="images/wide.png" alt="" />
+                        <img
+                            src="images/wide.png"
+                            alt="프로젝트 소개"
+                            loading="lazy"
+                        />
                     </div>
                     <div class="small">
-                        <img src="images/small.png" alt="" />
+                        <img
+                            src="images/small.png"
+                            alt="프로젝트 소개"
+                            loading="lazy"
+                        />
                     </div>
                 </section>
 
@@ -354,32 +459,56 @@
                     </p>
                     <ul class="license-list">
                         <li class="animate" data-animation="fade-in">
-                            <img src="images/crimg01.png" alt="" />
+                            <img
+                                src="images/crimg01.png"
+                                alt="온라인 트레이닝 보상 서비스 특허"
+                                loading="lazy"
+                            />
                             <p class="wide">
                                 개인 발전형 운동기구를 이용한<br />온라인
                                 트레이닝 보상 서비스 방법
                             </p>
                         </li>
                         <li class="animate" data-animation="slide-up">
-                            <img src="images/crimg09.png" alt="" />
+                            <img
+                                src="images/crimg09.png"
+                                alt="발전기용 고정자 디자인 특허"
+                                loading="lazy"
+                            />
                             <p class="wide">발전기용 고정자 디자인 특허</p>
                         </li>
                         <li class="animate" data-animation="zoom-in">
-                            <img src="images/crimg09.png" alt="" />
+                            <img
+                                src="images/crimg09.png"
+                                alt="Cyrus 상표권"
+                                loading="lazy"
+                            />
                             <p class="wide">Cyrus 상표권</p>
                         </li>
                         <li class="animate" data-animation="rotate-in">
-                            <img src="images/crimg10.png" alt="" />
+                            <img
+                                src="images/crimg10.png"
+                                alt="자가 발전이 가능한 실내 운동용 자전거"
+                                loading="lazy"
+                            />
                             <p class="wide">
                                 자가 발전이 가능한 실내 운동용 자전거
                             </p>
                         </li>
                         <li class="animate" data-animation="slide-left">
-                            <img src="images/crimg11.png" alt="" />
+                            <img
+                                src="images/crimg11.png"
+                                alt="KC 생활안전인증"
+                                loading="lazy"
+                            />
                             <p class="wide">KC 생활안전인증</p>
                         </li>
                         <li class="animate" data-animation="slide-right">
-                            <img src="images/crimg12.png" alt="" />
+                            <img
+                                src="images/crimg12.png"
+                                alt="KC 전자파 적합등록필증"
+                                loading="lazy"
+                            />
                             <p class="wide">KC 전자파 적합등록필증</p>
                         </li>
                     </ul>
@@ -388,7 +517,10 @@
         </div>
 
         <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="js/script.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+            defer
+        ></script>
+        <script src="js/script.js" defer></script>
     </body>
 </html>
