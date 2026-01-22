@@ -34,7 +34,7 @@
                 <li><a href="contect.html">Contact</a></li>
             </ul>
         </div>
-        <section class="home">
+        <section class="home animate" data-animation="zoom-in">
             <img class="wide2" src="images/offcial5.png" alt="" />
             <img class="small" src="images/offcial4.png" alt="" />
         </section>
@@ -64,9 +64,29 @@
                 !hamburgerBtn.contains(e.target) &&
                 !headerMenu.contains(e.target)
             ) {
-                hamburgerBtn.classList.remove("active");
-                headerMenu.classList.remove("active");
+            hamburgerBtn.classList.remove("active");
+            headerMenu.classList.remove("active");
+        }
+    });
+
+    // 스크롤 애니메이션 - Intersection Observer
+    const animateElements = document.querySelectorAll('.animate');
+
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
             }
         });
-    </script>
+    }, observerOptions);
+
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+</script>
 </html>

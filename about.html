@@ -38,14 +38,14 @@
             <img src="images/main2.gif" alt="" />
         </div>
         <!-- Section 1: CYRUS BIKE Overview -->
-        <section class="section section-1">
+        <section class="section section-1 animate" data-animation="slide-right">
             <div class="header-line"></div>
             <div class="section-title">
                 <h1>사이러스 바이크 개요</h1>
             </div>
             <div class="content-card">
                 <div class="overview-content">
-                    <div class="overview-left">
+                    <div class="overview-left animate" data-animation="slide-left">
                         <h2>CYRUS BIKE POINT</h2>
                         <div class="points-grid">
                             <div class="point-item">
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="overview-right">
+                    <div class="overview-right animate" data-animation="zoom-in">
                         <img
                             src="images/detail3.jpg"
                             alt="CYRUS BIKE"
@@ -96,13 +96,13 @@
         </section>
 
         <!-- Section 2: Exercise Performance Data -->
-        <section class="section section-2">
+        <section class="section section-2 animate" data-animation="fade-in">
             <div class="header-line"></div>
             <div class="section-title">
                 <h1>사이러스 바이크 전력생산</h1>
             </div>
             <div class="performance-cards">
-                <div class="perf-card perf-card-left">
+                <div class="perf-card perf-card-left animate" data-animation="slide-left">
                     <h2>사이러스 바이크 1시간 운동 = 100Wh</h2>
                     <p class="perf-subtitle">
                         (생언 날씨 평균 전력 생산량 기준)
@@ -118,7 +118,7 @@
                         <p class="small-text">(= 1,418kWh = 1.4MWh)</p>
                     </div>
                 </div>
-                <div class="perf-card perf-card-right">
+                <div class="perf-card perf-card-right animate" data-animation="slide-right">
                     <div class="comparison-item">
                         <div class="comparison-text">
                             <h3>월반기정(한국 기준)</h3>
@@ -150,37 +150,37 @@
         </section>
 
         <!-- Section 3: Operating Principle -->
-        <section class="section section-3">
+        <section class="section section-3 animate" data-animation="slide-left">
             <div class="header-line"></div>
             <div class="section-title">
                 <h1>사이러스 바이크 구동원리</h1>
             </div>
-            <div class="wide">
+            <div class="wide animate" data-animation="zoom-in">
                 <img src="./images/content31.png" alt="" />
             </div>
-            <div class="small">
+            <div class="small animate" data-animation="fade-in">
                 <img src="./images/content311.png" alt="" />
                 <img src="./images/content312.png" alt="" />
             </div>
         </section>
 
         <!-- Section 4: Comparison -->
-        <section class="section section-4">
+        <section class="section section-4 animate" data-animation="zoom-in">
             <div class="header-line"></div>
             <div class="section-title">
                 <h1>사이러스 바이크 경쟁사 비교분석</h1>
             </div>
-            <div class="wide">
+            <div class="wide animate" data-animation="rotate-in">
                 <img src="./images/content41.png" alt="" />
             </div>
-            <div class="small">
+            <div class="small animate" data-animation="slide-up">
                 <img src="./images/content411.png" alt="" />
                 <img src="./images/content412.png" alt="" />
             </div>
         </section>
 
         <!-- Section 6: Exercise Performance Data Chart -->
-        <section class="section section-6">
+        <section class="section section-6 animate" data-animation="slide-up">
             <div class="header-line"></div>
 
             <div class="section-title">
@@ -189,7 +189,7 @@
                     사이러스 바이크 총 누적 전기 생산량(kWh)
                 </p>
             </div>
-            <div class="chart-container">
+            <div class="chart-container animate" data-animation="fade-in">
                 <div class="chart-info-top">
                     <p class="chart-note">
                         2025.07 사이러스바이크 사용자 데이터 기준
@@ -276,14 +276,14 @@
             <img class="small" src="images/offcial3.png" alt="" />
         </div>
         <!-- Section 7: Same as Section 5 -->
-        <section class="section section-7">
+        <section class="section section-7 animate" data-animation="rotate-in">
             <div class="header-line"></div>
 
             <div class="section-title">
                 <h1>운동 데이터 기반 리워드 시스템</h1>
             </div>
             <div class="content-card">
-                <div class="reward-system">
+                <div class="reward-system animate" data-animation="slide-up">
                     <div class="process-steps">
                         <div class="step">1. 플레이스토어 검색</div>
                         <span class="arrow">▶</span>
@@ -342,6 +342,26 @@
                     hamburgerBtn.classList.remove("active");
                     headerMenu.classList.remove("active");
                 }
+            });
+
+            // 스크롤 애니메이션 - Intersection Observer
+            const animateElements = document.querySelectorAll('.animate');
+
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, observerOptions);
+
+            animateElements.forEach(element => {
+                observer.observe(element);
             });
         </script>
     </body>

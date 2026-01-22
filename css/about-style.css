@@ -20,6 +20,104 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.section {
+    overflow-x: hidden;
+}
+
+/* 애니메이션 초기 상태 */
+.animate {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 애니메이션이 실행된 상태 */
+.animate.show {
+    opacity: 1;
+}
+
+/* 페이드인 애니메이션 */
+.animate[data-animation="fade-in"] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.animate[data-animation="fade-in"].show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 왼쪽에서 슬라이드 */
+.animate[data-animation="slide-left"] {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.animate[data-animation="slide-left"].show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 오른쪽에서 슬라이드 */
+.animate[data-animation="slide-right"] {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.animate[data-animation="slide-right"].show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 아래에서 위로 슬라이드 */
+.animate[data-animation="slide-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.animate[data-animation="slide-up"].show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 줌인 애니메이션 */
+.animate[data-animation="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.animate[data-animation="zoom-in"].show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 회전하며 나타나기 */
+.animate[data-animation="rotate-in"] {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+}
+
+.animate[data-animation="rotate-in"].show {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+/* 360도 회전하며 나타나기 */
+.animate[data-animation="rotate-360"] {
+    opacity: 0;
+    transform: rotate(360deg) scale(0.5);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate[data-animation="rotate-360"].show {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
 }
 
 .fix {
