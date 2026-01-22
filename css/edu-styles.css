@@ -302,7 +302,9 @@ html {
     color: #555;
     line-height: 1.6;
 }
-
+.slide-img img {
+    width: 100%;
+}
 /* 슬라이드 3: 교육적 활용 방안 */
 .strategy-grid {
     display: grid;
@@ -310,7 +312,12 @@ html {
     gap: 25px;
     padding: 20px;
 }
-
+.wide {
+    display: block;
+}
+.small {
+    display: none;
+}
 .strategy-card {
     background: white;
     border-radius: 15px;
@@ -1218,21 +1225,18 @@ html {
         padding: 20px 15px;
         margin-bottom: 20px;
     }
-
+    .wide {
+        display: none;
+    }
+    .small {
+        display: block;
+    }
     .title {
         font-size: 22px;
     }
 
     .card-title {
         font-size: 18px;
-    }
-
-    .card-text,
-    .strategy-text,
-    .strategy-list,
-    .reference-desc,
-    .achievement-list {
-        font-size: 12px;
     }
 
     .value-card,

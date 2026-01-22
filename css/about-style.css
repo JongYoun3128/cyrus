@@ -108,6 +108,57 @@ html {
     transform: rotate(0) scale(1);
 }
 
+/* 사용방법 섹션 스타일 */
+.use-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.use-section h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #171b39;
+}
+
+.use-box {
+    width: 100%;
+}
+
+.box-img {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.box-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+.box-text h2 {
+    background-color: #4a70f2;
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.box-text p {
+    margin-top: 10px;
+}
+
+.box-img li {
+    margin-bottom: 90px;
+}
+
+.box-img li img {
+    width: 400px;
+}
+
 /* 360도 회전하며 나타나기 */
 .animate[data-animation="rotate-360"] {
     opacity: 0;
@@ -1041,6 +1092,43 @@ html {
     .page-number {
         font-size: 12px;
     }
+
+    /* 사용방법 섹션 */
+    .use-section h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .box-img {
+        gap: 30px;
+    }
+
+    .box-img li {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .box-text {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .box-text h2 {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .box-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .box-img li img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
 }
 
 /* 작은 모바일 (320px ~ 480px) */
@@ -1123,5 +1211,29 @@ html {
     }
     .home2 .small {
         margin: 0 auto;
+    }
+
+    /* 사용방법 섹션 */
+    .use-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .box-text h2 {
+        width: fit-content;
+        margin: 0 auto;
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .box-text p {
+        font-size: 0.9rem;
+    }
+
+    .box-img li img {
+        max-width: 280px;
+    }
+
+    .box-img {
+        text-align: center;
     }
 }

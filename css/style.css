@@ -684,7 +684,7 @@ body {
         display: flex;
         flex-direction: row;
         gap: 15px;
-        animation: scrollListHorizontal 12s linear infinite;
+        animation: scrollListHorizontal 8s linear infinite;
         will-change: transform;
     }
 

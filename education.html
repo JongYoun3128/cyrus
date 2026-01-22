@@ -10,7 +10,7 @@
             content="https://jongyoun3128.github.io/cyrus/images/url.png"
         />
         <meta property="og:description" content="Cyrus Bike 공식파트너 " />
-        <title>EDUCATION</title>
+        <title>EDUCATION - CYRUS BIKE</title>
         <link rel="stylesheet" href="./css/edu-styles.css" />
         <link rel="icon" href="./images/pavi.png" />
     </head>
@@ -43,7 +43,11 @@
                 <div class="slide-header">
                     <h1 class="title">핵심 가치</h1>
                 </div>
-                <div class="cards-container">
+                <div class="slide-img">
+                    <img class="wide" src="images/value1.png" alt="" />
+                    <img class="small" src="images/value2.png" alt="" />
+                </div>
+                <!-- <div class="cards-container">
                     <div class="value-card animate" data-animation="slide-left">
                         <div class="icon-circle">
                             <img src="images/icon10.png" alt="" />
@@ -55,7 +59,10 @@
                         </p>
                     </div>
 
-                    <div class="value-card animate" data-animation="slide-right">
+                    <div
+                        class="value-card animate"
+                        data-animation="slide-right"
+                    >
                         <div class="icon-circle">
                             <img src="images/icon11.png" alt="" />
                         </div>
@@ -89,7 +96,7 @@
                             만들어요.
                         </p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- 슬라이드 3: 교육적 활용 방안 -->
@@ -113,7 +120,10 @@
                         </p>
                     </div>
 
-                    <div class="strategy-card animate" data-animation="slide-up">
+                    <div
+                        class="strategy-card animate"
+                        data-animation="slide-up"
+                    >
                         <div class="strategy-icon-box">
                             <img src="images/icon7.png" alt="" />
                         </div>
@@ -148,7 +158,10 @@
                         </ul>
                     </div>
 
-                    <div class="strategy-card animate" data-animation="rotate-in">
+                    <div
+                        class="strategy-card animate"
+                        data-animation="rotate-in"
+                    >
                         <div class="strategy-icon-box">
                             <img src="images/icon9.png" alt="" />
                         </div>
@@ -172,7 +185,10 @@
                     <h1 class="title">도입 및 운영 사례</h1>
                 </div>
                 <div class="reference-container">
-                    <div class="reference-column animate" data-animation="slide-left">
+                    <div
+                        class="reference-column animate"
+                        data-animation="slide-left"
+                    >
                         <div class="school-badge">창원 반림중학교</div>
                         <div class="reference-content">
                             <h3 class="reference-title">
@@ -199,7 +215,10 @@
                         </div>
                     </div>
 
-                    <div class="reference-column animate" data-animation="slide-right">
+                    <div
+                        class="reference-column animate"
+                        data-animation="slide-right"
+                    >
                         <div class="school-badge">부산 동래여자고등학교</div>
                         <div class="reference-content">
                             <h3 class="reference-title">
@@ -253,7 +272,10 @@
                         </div>
                     </div>
 
-                    <div class="event-section animate" data-animation="slide-up">
+                    <div
+                        class="event-section animate"
+                        data-animation="slide-up"
+                    >
                         <div class="section-badge green">
                             사이러스 바이크 지원 행사
                         </div>
@@ -280,7 +302,10 @@
                     <h1 class="title">대외 활동 및 성과</h1>
                 </div>
                 <div class="achievement-grid">
-                    <div class="achievement-card animate" data-animation="slide-left">
+                    <div
+                        class="achievement-card animate"
+                        data-animation="slide-left"
+                    >
                         <div class="achievement-badge">정부 지원 사업 참여</div>
                         <div class="achievement-image-box detail13"></div>
                         <ul class="achievement-list">
@@ -292,7 +317,10 @@
                         </ul>
                     </div>
 
-                    <div class="achievement-card animate" data-animation="zoom-in">
+                    <div
+                        class="achievement-card animate"
+                        data-animation="zoom-in"
+                    >
                         <div class="achievement-badge">대외 언론 성과</div>
                         <div class="achievement-image-box detail14">
                             <div class="media-snippet"></div>
@@ -309,7 +337,10 @@
                         </ul>
                     </div>
 
-                    <div class="achievement-card animate" data-animation="slide-right">
+                    <div
+                        class="achievement-card animate"
+                        data-animation="slide-right"
+                    >
                         <div class="achievement-badge">국제 박람회 참여</div>
                         <div class="achievement-image-box detail15"></div>
                         <ul class="achievement-list">
@@ -413,7 +444,9 @@
                     <h1 class="title">도입효과 및 기대 성과</h1>
                 </div>
                 <div class="effect-section">
-                    <div class="main-message animate" data-animation="zoom-in">학생의 실천이 만드는 선순환</div>
+                    <div class="main-message animate" data-animation="zoom-in">
+                        학생의 실천이 만드는 선순환
+                    </div>
 
                     <div class="effect-boxes animate" data-animation="slide-up">
                         <div class="effect-box">
@@ -491,22 +524,22 @@
             });
 
             // 스크롤 애니메이션 - Intersection Observer
-            const animateElements = document.querySelectorAll('.animate');
+            const animateElements = document.querySelectorAll(".animate");
 
             const observerOptions = {
                 threshold: 0.15,
-                rootMargin: '0px 0px -50px 0px'
+                rootMargin: "0px 0px -50px 0px",
             };
 
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
+                        entry.target.classList.add("show");
                     }
                 });
             }, observerOptions);
 
-            animateElements.forEach(element => {
+            animateElements.forEach((element) => {
                 observer.observe(element);
             });
         </script>

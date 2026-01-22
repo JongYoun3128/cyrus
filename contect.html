@@ -12,7 +12,7 @@
         <meta property="og:description" content="CYRUS Bike 공식파트너 " />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="./images/pavi.png" />
-        <title>CONTACT</title>
+        <title>CONTACT - CYRUS BIKE</title>
     </head>
     <body>
         <div class="fix">
@@ -64,29 +64,29 @@
                 !hamburgerBtn.contains(e.target) &&
                 !headerMenu.contains(e.target)
             ) {
-            hamburgerBtn.classList.remove("active");
-            headerMenu.classList.remove("active");
-        }
-    });
-
-    // 스크롤 애니메이션 - Intersection Observer
-    const animateElements = document.querySelectorAll('.animate');
-
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
+                hamburgerBtn.classList.remove("active");
+                headerMenu.classList.remove("active");
             }
         });
-    }, observerOptions);
 
-    animateElements.forEach(element => {
-        observer.observe(element);
-    });
-</script>
+        // 스크롤 애니메이션 - Intersection Observer
+        const animateElements = document.querySelectorAll(".animate");
+
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, observerOptions);
+
+        animateElements.forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
 </html>
