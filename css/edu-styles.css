@@ -970,7 +970,6 @@ html {
 
     /* 슬라이드 3: 교육적 활용 방안 */
     .strategy-grid {
-        grid-template-columns: 1fr;
         gap: 20px;
         padding: 10px;
     }
