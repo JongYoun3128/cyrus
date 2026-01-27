@@ -1291,4 +1291,7 @@ html {
         padding: 12px 8px;
         font-size: 11px;
     }
+    .small {
+        margin-bottom: 30px;
+    }
 }
