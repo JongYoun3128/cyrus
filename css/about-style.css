@@ -20,7 +20,6 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    overflow-x: hidden;
 }
 
 html {
@@ -158,7 +157,15 @@ html {
 .box-img li img {
     width: 400px;
 }
-
+.wide3 img {
+    width: 100%;
+}
+.wide3 {
+    display: block;
+}
+.small3 {
+    display: none;
+}
 /* 360도 회전하며 나타나기 */
 .animate[data-animation="rotate-360"] {
     opacity: 0;
@@ -372,7 +379,9 @@ html {
 }
 
 /* Section 2: Performance Data */
-
+.performance img {
+    width: 100%;
+}
 .performance-cards {
     display: flex;
     gap: 40px;
@@ -785,7 +794,9 @@ html {
 /* 모바일 최적화 */
 @media (max-width: 768px) {
     /* 헤더 */
-
+    body {
+        overflow-x: hidden;
+    }
     .header-logo {
         z-index: 100;
     }
@@ -1235,5 +1246,14 @@ html {
 
     .box-img {
         text-align: center;
+    }
+    .wide3 {
+        display: none;
+    }
+    .small3 img {
+        width: 100%;
+    }
+    .small3 {
+        display: block;
     }
 }
