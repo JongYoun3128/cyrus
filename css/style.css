@@ -1158,5 +1158,8 @@ body {
     }
     .point-item {
         width: 90%;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 }
