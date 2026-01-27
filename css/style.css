@@ -224,7 +224,13 @@ body {
         visibility 0.3s ease;
     cursor: pointer;
 }
-
+.wide3 {
+    display: block;
+    margin-top: 100px;
+}
+.small3 {
+    display: none;
+}
 .fix:hover {
     transform: translateY(-5px);
     background-color: #3ea480;
@@ -1124,7 +1130,16 @@ body {
     .product h3 {
         font-size: 1.3rem;
     }
-
+    .small3 img {
+        width: 100%;
+    }
+    .small3 {
+        display: block;
+        margin-top: 80px;
+    }
+    .wide3 {
+        display: none;
+    }
     /* 나중추가분 */
 
     .section-title {
